@@ -1,0 +1,141 @@
+.saved-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.saved-content {
+  padding: 30px;
+  border-radius: 10px;
+  width: 90%;
+  height: 90%;
+  max-width: 1200px;
+  max-height: 800px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.saved-content.light {
+  background-color: #ffffff;
+  color: #333333;
+}
+
+.saved-content.dark {
+  background-color: #333333;
+  color: #ffffff;
+}
+
+.saved-content h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.saved-content ul {
+  list-style-type: none;
+  padding: 0;
+  flex-grow: 1;
+  overflow-y: auto;
+}
+
+.saved-item {
+  margin-bottom: 30px;
+  border: 1px solid #ccc;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+.saved-item h3 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+.saved-item-content {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.saved-item-image {
+  flex: 0 0 200px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+.saved-item-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.saved-item-details {
+  flex: 1 1 300px;
+}
+
+.saved-item-details h4 {
+  margin-top: 0;
+  margin-bottom: 5px;
+  font-size: 16px;
+}
+
+.saved-item-details p {
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+
+.saved-content button {
+  align-self: flex-end;
+  margin-top: 20px;
+  padding: 12px 24px;
+  background-color: #0B60B0;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+.saved-content button:hover {
+  background-color: #40A2D8;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+@media (max-width: 768px) {
+  .saved-content {
+    width: 95%;
+    height: 95%;
+    padding: 20px;
+  }
+
+  .saved-content h2 {
+    font-size: 20px;
+  }
+
+  .saved-item h3 {
+    font-size: 16px;
+  }
+
+  .saved-item-details h4 {
+    font-size: 14px;
+  }
+
+  .saved-item-details p {
+    font-size: 12px;
+  }
+
+  .saved-content button {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+}
